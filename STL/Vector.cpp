@@ -4,6 +4,7 @@
 using namespace std;
 int main()
 {
+    // vector<data_type>vector_name(size_of_vector,initialize_value);
     vector<int>v(10,50);
     v.push_back(7);
     v.push_back(7);

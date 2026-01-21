@@ -1,11 +1,11 @@
-    // which is use for priority element it print first the largest in elemet priorityqueue
+    // which is use for priority element it print first the largest in elemet priority queue
 
     #include<iostream>
     #include<bits/stdc++.h>
     using namespace std;
     int main()
     {
-        priority_queue<int,greater<int>>pq;
+        priority_queue<int,greater<int>> pq;
         pq.push(5);
         pq.push(3);
         pq.push(56);

@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
   int value;
-  cout<<"Enter thr value you want to search in set "<<endl;
+  cout<<"Enter the value you want to search in set "<<endl;
   cin>>value;
  unordered_set<int>s1;
  s1.insert(50); 
