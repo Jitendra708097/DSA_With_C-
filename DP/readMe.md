@@ -15,3 +15,4 @@ Overlapping Sub-Problem
 **1. To calculate nth fibnacci number.**
 **3. print full fibnacci series till n.**
 **4. Climbing Stairs**
+**5. Count Number of hops**
