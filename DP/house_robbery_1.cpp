@@ -29,7 +29,7 @@ int maxStealAmount(int n, int arr[],vector<int>&dp)
     return dp[n];
 
     // General Cases
-    dp[n] = max(arr[n] + maxAmount(n - 2, arr), maxAmount(n - 1, arr));
+    dp[n] = max(arr[n] + maxStealAmount(n - 2, arr,dp), maxStealAmount(n - 1, arr,dp));
     return dp[n];
 }
 
