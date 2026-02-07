@@ -5,7 +5,7 @@
 using namespace std;
 int main()
 {
-      int vertex,edge;
+    int vertex,edge;
     cout<<"Enter the size of vertex : ";
     cin>>vertex;
     cout<<"Enter the size edges : ";
