@@ -1,5 +1,6 @@
 // Reverse Linked list 
 #include<iostream>
+#include<vector>
 using namespace std;
 
 class Node
@@ -48,6 +49,29 @@ Node *reverse(Node *head)
 
     return prev;
     
+};
+
+// reverse data of linkedlist 
+Node *reverseData(Node *head)
+{
+    vector<int>temp;
+
+    Node *dummy = head;
+    while(dummy != NULL)
+    {
+        temp.push_back(dummy->data);
+        dummy = dummy->next;
+    }
+
+    dummy = head;
+    int index = 0;
+    while (dummy != NULL)
+    {
+        dummy->data = temp[index];
+        index++;
+        dummy = dummy->next;
+    }
+    return head;
 }
 
 int main()
@@ -76,6 +100,8 @@ printLinkedList(head);
 
 cout<<endl<<"Reverse Linked List: ";
 Node *temp1 = reverse(head);
+
+temp1 = reverseData(temp1);
 printLinkedList(temp1);
 
 }
