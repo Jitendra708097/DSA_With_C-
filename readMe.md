@@ -43,8 +43,7 @@ This repo contains implementations of common algorithms and data structures in i
 - DP(Dynamic Programming)
 - Trie
 - Greedy Algorithm
-- 
-
+```
 ## Repository Structure
 Note: adjust actual folders if yours differ. Suggested structure:
 
