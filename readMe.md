@@ -8,6 +8,7 @@ This repository is intended as a learning resource and a reference for typical D
 
 ## Table of Contents
 - [About](#about)
+- [Topics Covered](#topics-covered)
 - [Repository Structure](#repository-structure)
 - [Prerequisites](#prerequisites)
 - [Build & Run](#build--run)
@@ -20,6 +21,29 @@ This repository is intended as a learning resource and a reference for typical D
 
 ## About
 This repo contains implementations of common algorithms and data structures in idiomatic, modern C++ to help practice problem solving and to serve as a study reference for interviews, coursework, and competitions.
+
+## Topics Covered
+```cpp
+- Array
+- Sorting
+- Sliding Window
+- Prefix Suffix
+- String
+- KMP Algorithm
+- Recrusion
+- Pointer
+- OOPS(Object Oriented Programming)
+- Linked List
+- Stack
+- Queue
+- STL(Standard template library)
+- Tree
+- Heap
+- Graph
+- DP(Dynamic Programming)
+- Trie
+- Greedy Algorithm
+- 
 
 ## Repository Structure
 Note: adjust actual folders if yours differ. Suggested structure:
