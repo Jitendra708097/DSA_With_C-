@@ -16,14 +16,14 @@ class Node
 // inorder traversal order
 // To print the tree 
 // LNR  left most uske bad Node then Right
-void preorder(Node *root)
+void in_order_traversal(Node *root)
 {
     if(root==NULL)
     return;
 
-    preorder(root->left);
-    preorder(root->right);
-     cout<<root->data<<" ";
+    in_order_traversal(root->left);
+    cout << root->data << " ";
+    in_order_traversal(root->right);
 };
 int main()
 {
@@ -54,5 +54,5 @@ int main()
         }
     }
     cout<<"inorder traversal answer : ";
-    preorder(root);
+    in_order_traversal(root);
 }
