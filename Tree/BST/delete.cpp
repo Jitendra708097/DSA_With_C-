@@ -84,49 +84,83 @@ void postorder(Node *root)
     cout << root->data << " ";
 }
 
-
 Node *delete_element(Node *root,int element)
 {
     // Base Case 
     if(root == NULL)
     return root;
 
-    // 1. root ka left element nhi hai 
-    if(root->left == NULL)
-    {
-        if(root->data == element)
-        {
-            Node *temp = root->right;
-            delete root;
-            return temp;
-        }
-    }
-
-    // 2. root ka right element nhi hai 
-    if(root->right == NULL)
-    {
-        if(root->data == element)
-        {
-            Node *temp = root->left;
-            delete root;
-            return temp;
-        }
-    }
-
-    // 3 delete leaf element 
-    if(root->left == NULL && root->right == NULL)
-    {
-        if(root->data == element)
-        {
-            delete root;
-            return NULL;
-        }
-    }
-
     if(element<root->data)
     root->left = delete_element(root->left,element);
-    else
+    else if(root->data<element)
     root->right = delete_element(root->right,element);
+
+    else
+    {
+        // 1. root ka left element nhi hai
+        if (root->left == NULL)
+        {
+            if (root->data == element)
+            {
+                Node *temp = root->right;
+                delete root;
+                return temp;
+            }
+        }
+
+        // 2. root ka right element nhi hai
+        if (root->right == NULL)
+        {
+            if (root->data == element)
+            {
+                Node *temp = root->left;
+                delete root;
+                return temp;
+            }
+        }
+
+        // 3 delete leaf element
+        if (root->left == NULL && root->right == NULL)
+        {
+            if (root->data == element)
+            {
+                delete root;
+                return NULL;
+            }
+        }
+
+        // delete root Node from binary tree
+        if(root->left != NULL && root->right != NULL)
+        {
+            if(root->data == element)
+            {
+                Node *parent = root;
+                Node *child = root->left;
+
+                // find right most element of child node 
+                while(child->right)
+                {
+                    parent = child;
+                    child = child->right;
+                }
+
+                if(root == parent)
+                {
+                    child->right = root->right;
+                    delete root;
+                    return child;
+                }
+                else
+                {
+                    parent->right = child->left;
+                    child->left = root->left;
+                    child->right = root->right;
+                    delete root;
+                    return child;
+                }
+            }
+        }
+    }
 
     return root;
 }
