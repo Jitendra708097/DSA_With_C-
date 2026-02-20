@@ -26,11 +26,11 @@ void QuickSort(int arr[],int start,int end)
     return ;
 
     int pivot = Partition(arr,start,end);  // it returns the position of pivot element
-    cout<<"pivot "<<pivot<<endl;
+    // cout<<"pivot "<<pivot<<endl;
     QuickSort(arr,start,pivot-1);  // it solve left portion of array
-    cout<<"pivot "<<pivot<<" start "<<start<<endl;
+    // cout<<"pivot "<<pivot<<" start "<<start<<endl;
     QuickSort(arr,pivot+1,end);  // it solve right portion of array
-    cout<<"pivot "<<pivot<<" end "<<end<<endl;
+    // cout<<"pivot "<<pivot<<" end "<<end<<endl;
 }
 int main()
 {
@@ -43,7 +43,7 @@ int main()
         cout<<arr[i]<<" ";
     }
     cout<<endl;
-    QuickSort(arr,0,10);
+    QuickSort(arr,0,10);  // recursion call
 
     cout<<"Print array after sorted"<<endl;
     for(int i=0;i<11;i++)

@@ -51,14 +51,14 @@ void MergeSort(int arr[],int start,int end)
     int mid = (start+end)/2;
 
     // for left portion of array
-    cout<<"left "<<start<<" mid "<<mid<<endl; 
+    // cout<<"left "<<start<<" mid "<<mid<<endl; 
     MergeSort(arr,start,mid);
     // for right portion of array 
-    cout<<"right "<<mid+1<<" end "<<end<<endl;
+    // cout<<"right "<<mid+1<<" end "<<end<<endl;
     MergeSort(arr,mid+1,end);
 
     // after that merge two sorted array 
-    cout<<"start "<<start<<" mid "<<mid<<" end "<<end<<endl;
+    // cout<<"start "<<start<<" mid "<<mid<<" end "<<end<<endl;
     Merge(arr,start,mid,end);
 }
 
