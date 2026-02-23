@@ -2,7 +2,6 @@
 // L1,L2 and find their sum in L3 
 
 #include<iostream>
-#include<array>  // size
 using namespace std;
 
 // Create Node 
@@ -71,10 +70,13 @@ Node *reverse_linked_list(Node *head)
     return prev;
 }
 
+// Add elements of two linked list 
 Node *add_two_number(Node *head1, Node *head2,Node *head3)
 {
     int carry = 0;
     Node *temp;
+
+    // Add two linked when there size are equal 
     while (head1 != NULL && head2 != NULL)
     {
         int num = head1->data + head2->data + carry;
